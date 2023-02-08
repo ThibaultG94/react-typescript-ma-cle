@@ -2,32 +2,32 @@ import React from 'react';
 
 const NavigationLarge = () => {
 	return (
-		<ul className="header-navbar">
-			<li className="navbar_item">
-				<a href="/">Ma Clé</a>
-				<ul className="navbar_under-item"></ul>
-			</li>
-			<li className="navbar_item">
-				<a href="/">Conciergerie Locative</a>
-				<ul className="navbar_under-item"></ul>
-			</li>
-			<li className="navbar_item">
-				<a href="/">Bail Mobilité</a>
-				<ul className="navbar_under-item"></ul>
-			</li>
-			<li className="navbar_item">
-				<a href="/">Nos tarifs</a>
-				<ul className="navbar_under-item"></ul>
-			</li>
-			<li className="navbar_item">
-				<a href="/">Proposez votre bien</a>
-				<ul className="navbar_under-item"></ul>
-			</li>
-			<li className="navbar_item">
-				<a href="/">Contact</a>
-				<ul className="navbar_under-item"></ul>
-			</li>
-		</ul>
+		<nav>
+			<ul className="header-navbar">
+				<li className="navbar_item">
+					<a href="/">Ma Clé</a>
+					<ul className="navbar_under-item">
+						<li>Ma Clé Expertise</li>
+						<li>La Location Meublée</li>
+					</ul>
+				</li>
+				<li className="navbar_item">
+					<a href="/">Conciergerie Locative</a>
+				</li>
+				<li className="navbar_item">
+					<a href="/">Bail Mobilité</a>
+				</li>
+				<li className="navbar_item">
+					<a href="/">Nos tarifs</a>
+				</li>
+				<li className="navbar_item">
+					<a href="/">Proposez votre bien</a>
+				</li>
+				<li className="navbar_item">
+					<a href="/">Contact</a>
+				</li>
+			</ul>
+		</nav>
 	);
 };
 

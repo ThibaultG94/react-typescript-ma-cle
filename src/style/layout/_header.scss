@@ -1,0 +1,179 @@
+.header {
+	background: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: transform 0.4s ease-in-out, box-shadow 0.3s;
+	padding: 15px;
+}
+
+.header-top {
+	max-width: 1295px;
+	@include childAlign(flex-end);
+
+	h1 {
+		color: rgba($dark-color, 0.6);
+		font-size: 0.7rem;
+		font-weight: 400;
+		text-align: right;
+		letter-spacing: -0.1px;
+	}
+}
+
+.header-primary {
+	@include childAlign(space-between);
+	padding: 26px 26px 4px;
+
+	.header-nav {
+		display: flex;
+
+		nav {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+.header-logo {
+	margin-right: 38px;
+
+	.logo {
+		display: flex;
+		align-items: center;
+
+		img {
+			max-height: 65px;
+			transition: transform 0.3s ease;
+
+			&:hover {
+				transform: translateY(5px);
+			}
+		}
+	}
+}
+
+.header-navbar {
+	display: flex;
+	align-items: center;
+	transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+
+	li {
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 20px;
+		padding: 10px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		background: $white;
+
+		&::before {
+			content: '';
+			height: 20px;
+			background: (rgba($dark-color, 0.25));
+			width: 1px;
+			position: absolute;
+			left: 0;
+			transform: translateY(-1px);
+		}
+
+		&::after {
+			content: '';
+			height: 20px;
+			background: (rgba($dark-color, 0.25));
+			width: 1px;
+			position: absolute;
+			right: 0;
+			transform: translateY(-1px);
+		}
+
+		&:first-child {
+			&::before {
+				content: unset;
+			}
+		}
+		&:last-child {
+			&::after {
+				content: unset;
+			}
+		}
+
+		&:hover {
+			background-color: $secondary-color;
+
+			@media screen and (max-width: 1025px) {
+				background: $white;
+			}
+
+			& > a {
+				color: $white;
+
+				@media screen and (max-width: 1025px) {
+					color: $secondary-color;
+				}
+			}
+
+			& > .header-sous_menu {
+				opacity: 1;
+				transform: translateY(0px);
+				left: 0;
+
+				@media screen and (max-width: 1024px) {
+					opacity: 0;
+				}
+			}
+
+			& > .trick {
+				z-index: 1;
+			}
+		}
+	}
+
+	a {
+		color: $font;
+		letter-spacing: 0.3px;
+	}
+}
+
+.header-btn {
+	color: $white;
+	display: flex;
+	flex-wrap: wrap;
+
+	@media screen and (max-width: 1500px) {
+		font-size: 0.94rem;
+		max-width: 14rem;
+		text-align: center;
+		padding: 9px 15px 8px !important;
+	}
+
+	@media screen and (max-width: 1024px) {
+		border-radius: 0 !important;
+		padding: 5px 14px 7px !important;
+	}
+
+	&:hover {
+		background-color: $highlight-color;
+		box-shadow: 0 0 3rem 0 rgb(0 0 0 / 25%);
+	}
+
+	span {
+		color: $white;
+
+		@media screen and (max-width: 1500px) {
+			max-width: 7rem;
+			line-height: 1.1;
+		}
+
+		@media screen and (max-width: 1024px) {
+			font-size: 0.81rem;
+			line-height: 14px;
+		}
+	}
+}
+
+.navbar_under-item {
+	position: absolute;
+	display: none;
+}

@@ -5,14 +5,16 @@ import NavigationMiddle from './NavigationMiddle';
 
 const Header = () => {
 	return (
-		<div className="container">
-			<header className="header">
-				<div className="header-top">
-					<p>Spécialiste gestion locative de courte durée</p>
-				</div>
+		<header className="header">
+			<div className="header-top">
+				<h1>Spécialiste gestion locative de courte durée</h1>
+			</div>
+			<div className="header-primary">
 				<div className="header-nav">
 					<div className="header-logo">
-						<img src="./img/headerlogo.webp" alt="logo" />
+						<a href="/" className="logo">
+							<img src="./img/headerlogo.webp" alt="logo" />
+						</a>
 					</div>
 					<MediaQuery minWidth={1025}>
 						<NavigationLarge />
@@ -26,8 +28,8 @@ const Header = () => {
 						<span>Confiez-nous votre bien</span>
 					</a>
 				</div>
-			</header>
-		</div>
+			</div>
+		</header>
 	);
 };
 
