@@ -6,6 +6,7 @@ const NavigationLarge = () => {
 			<ul className="header-navbar">
 				<li className="navbar_item">
 					<a href="/">Ma Clé</a>
+					<div className="trick"></div>
 					<ul className="navbar_under-item">
 						<li>Ma Clé Expertise</li>
 						<li>La Location Meublée</li>
