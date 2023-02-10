@@ -7,8 +7,11 @@
 	transition: transform 0.4s ease-in-out, box-shadow 0.3s;
 	padding: 15px;
 
+	@media screen and (max-width: 1440px) {
+		padding: 15px 0;
+	}
+
 	@media screen and (max-width: 1024px) {
-		padding: 0 0 0 3%;
 		height: 60px;
 		display: flex;
 		align-items: center;
@@ -16,18 +19,20 @@
 
 	&-container {
 		@media screen and (min-width: 1441px) {
-			max-width: 75vw;
+			max-width: 70vw;
 			margin: 0 auto;
 		}
 
 		@media screen and (max-width: 1440px) {
-			max-width: 1295px;
+			// max-width: 1270px;
+			max-width: 94%;
 			margin: 0 auto;
 		}
 
 		@media screen and (max-width: 1024px) {
-			margin: 0;
+			// max-width: 1295px;
 			width: 100%;
+			// max-width: 94%;
 		}
 	}
 }
