@@ -10,7 +10,7 @@ const NavigationMiddle = () => {
 						<span className="toggle-menu-line"></span>
 						<span className="toggle-menu-line"></span>
 					</span>
-					<span>Menu</span>
+					<span className="toggle-menu-label">Menu</span>
 				</span>
 			</button>
 		</nav>
